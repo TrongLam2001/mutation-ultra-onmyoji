@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://tronglam2001.github.io/mutation-ultra-onmyoji/sitemap.xml
