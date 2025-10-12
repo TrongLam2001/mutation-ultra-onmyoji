@@ -11,17 +11,28 @@
     box-sizing: border-box
 }
 
-body {
+main {
     font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
     background: var(--bg);
     color: #0f172a;
-    margin: 24px;
     display: flex;
     align-items: center;
     justify-content: center;
-    min-height: 100vh;
+    flex-direction: column;
+    /* min-height: 100vh; */
+    height: 100dvh;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+}
+
+.calendar {
+    background: var(--card);
+    border-radius: 12px;
+    box-shadow: 0 6px 24px rgba(2, 6, 23, 0.08);
+    padding: 20px;
+    overflow-x: auto;
+    height: auto;
+    margin-top: 2rem;
 }
 
 .mutation-list {
@@ -36,13 +47,8 @@ body {
     height: 40px;
 }
 
-.calendar {
-    background: var(--card);
-    border-radius: 12px;
-    box-shadow: 0 6px 24px rgba(2, 6, 23, 0.08);
-    padding: 20px;
-    overflow-x: auto;
-    /* width: min(760px, 96vw); */
+.arrow {
+    font-size: 1.25rem;
 }
 
 .header {
@@ -144,7 +150,6 @@ body {
 }
 
 footer {
-    margin-top: auto;
     padding: 16px;
     text-align: center;
     color: #666;
@@ -249,14 +254,23 @@ footer a:hover {
 
 /* Very small screen (<= 480px) */
 @media (max-width: 480px) {
+    .arrow {
+        font-size: .9rem;
+    }
+
+    .weekday {
+        max-width: 3rem;
+        max-height: 3rem;
+    }
+
     .weekday img {
-        width: 48px;
-        height: 48px;
+        width: 80%;
+        height: 80%;
     }
 
     .mutation-list span img {
-        width: 26px;
-        height: 26px;
+        width: 1.5rem;
+        height: 1.5rem;
     }
 
     .month-title {
