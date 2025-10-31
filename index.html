@@ -10,6 +10,7 @@
     <meta name="author" content="_Hatsu_">
     <title>Mutations Ultra Boss Onmyoji</title>
     <link href="./style.css" rel='stylesheet' />
+    <link rel="stylesheet" href="./popup.css">
 </head>
 
 <body>
@@ -78,12 +79,85 @@
 
             </div>
         </div>
+        <button class="open-button" onclick="openForm()">Odokuro Message</button>
+
+        <div class="form-popup" id="myForm">
+            <form action="/action_page.php" class="form-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>True</th>
+                            <th>False</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>The General will bring down vengeance upon you if you KO the wrong target.</td>
+                            <td>Even if you harm the wrong one amongst us, it won’t affect your rewards.</td>
+                        </tr>
+                        <tr>
+                            <td>You have to kill us before harming the general.</td>
+                            <td>You won’t be punished if you KO the wrong target.</td>
+                        </tr>
+                        <tr>
+                            <td>If you want to continue, you’ll have to show us your strength and defeat some of our
+                                soldiers!</td>
+                            <td>The number of paper dolls will not change if you KO the wrong target.</td>
+                        </tr>
+                        <tr>
+                            <td>We trudged through deep mud and rain. Our troops are exhausted.</td>
+                            <td>If you want to continue, you’ll have to go through all of us!</td>
+                        </tr>
+                        <tr>
+                            <td>Besides a few hardships, we haven’t eaten a proper meal in days.</td>
+                            <td>The General took my advice and allowed our army to rest.</td>
+                        </tr>
+                        <tr>
+                            <td>I want to go home. I can’t take it anymore. I’m escaping this hell.</td>
+                            <td>We swept onto the battlefield without worry. Our troops are strong!</td>
+                        </tr>
+                        <tr>
+                            <td>I advised the General that our troops need to rest but he cursed and threw me from his
+                                tent.</td>
+                            <td>We haven’t eaten in days — but the General’s speech kept us going.</td>
+                        </tr>
+                        <tr>
+                            <td>We only managed to escape from the enemy by climbing a damp cliff and hiding in the
+                                rain.</td>
+                            <td>We charged with all our strength attacking the enemy.</td>
+                        </tr>
+                        <tr>
+                            <td>We progressed with difficulty in the rain, but didn’t stop to rest.</td>
+                            <td>We were ambushed while attacking the enemy.</td>
+                        </tr>
+                        <tr>
+                            <td>We were ambushed by the enemy.</td>
+                            <td>Although we were ambushed, we defeated them successfully.</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>While marching we didn’t get wet.</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+            </form>
+        </div>
         <footer>
             © 2025 Lịch Icon — Thiết kế bởi <strong>Ig: _Hatsu_</strong></a>
         </footer>
     </main>
 
     <script src="./index.js"></script>
+    <script>
+        function openForm() {
+            document.getElementById("myForm").style.display = "block";
+        }
+
+        function closeForm() {
+            document.getElementById("myForm").style.display = "none";
+        }
+    </script>
 </body>
 
 </html>
