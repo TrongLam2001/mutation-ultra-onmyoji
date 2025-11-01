@@ -81,67 +81,113 @@
         </div>
         <button class="open-button" onclick="openForm()">Odokuro Message</button>
 
-        <div class="form-popup" id="myForm">
-            <form action="/action_page.php" class="form-container">
-                <table>
-                    <thead>
-                        <tr>
-                            <th>True</th>
-                            <th>False</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>The General will bring down vengeance upon you if you KO the wrong target.</td>
-                            <td>Even if you harm the wrong one amongst us, it won’t affect your rewards.</td>
-                        </tr>
-                        <tr>
-                            <td>You have to kill us before harming the general.</td>
-                            <td>You won’t be punished if you KO the wrong target.</td>
-                        </tr>
-                        <tr>
-                            <td>If you want to continue, you’ll have to show us your strength and defeat some of our
-                                soldiers!</td>
-                            <td>The number of paper dolls will not change if you KO the wrong target.</td>
-                        </tr>
-                        <tr>
-                            <td>We trudged through deep mud and rain. Our troops are exhausted.</td>
-                            <td>If you want to continue, you’ll have to go through all of us!</td>
-                        </tr>
-                        <tr>
-                            <td>Besides a few hardships, we haven’t eaten a proper meal in days.</td>
-                            <td>The General took my advice and allowed our army to rest.</td>
-                        </tr>
-                        <tr>
-                            <td>I want to go home. I can’t take it anymore. I’m escaping this hell.</td>
-                            <td>We swept onto the battlefield without worry. Our troops are strong!</td>
-                        </tr>
-                        <tr>
-                            <td>I advised the General that our troops need to rest but he cursed and threw me from his
-                                tent.</td>
-                            <td>We haven’t eaten in days — but the General’s speech kept us going.</td>
-                        </tr>
-                        <tr>
-                            <td>We only managed to escape from the enemy by climbing a damp cliff and hiding in the
-                                rain.</td>
-                            <td>We charged with all our strength attacking the enemy.</td>
-                        </tr>
-                        <tr>
-                            <td>We progressed with difficulty in the rain, but didn’t stop to rest.</td>
-                            <td>We were ambushed while attacking the enemy.</td>
-                        </tr>
-                        <tr>
-                            <td>We were ambushed by the enemy.</td>
-                            <td>Although we were ambushed, we defeated them successfully.</td>
-                        </tr>
-                        <tr>
-                            <td></td>
-                            <td>While marching we didn’t get wet.</td>
-                        </tr>
-                    </tbody>
-                </table>
+        <div class="layout">
+            <div class="form-popup" id="myForm">
+                <form action="/action_page.php" class="form-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th class="true">True</th>
+                                <th class="false">False</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="true"><strong>[Battle]</strong> The General will bring down vengeance upon
+                                    you if
+                                    you KO the wrong
+                                    target.</td>
+                                <td class="false"><strong>[Battle]</strong> Even if you harm the wrong one amongst us,
+                                    it
+                                    won’t affect your
+                                    rewards.</td>
+                            </tr>
+                            <tr>
+                                <td class="true"><strong>[Battle]</strong> You have to kill us before harming the
+                                    general.
+                                </td>
+                                <td class="false"><strong>[Battle]</strong> You won’t be punished if you KO the wrong
+                                    target.</td>
+                            </tr>
+                            <tr>
+                                <td class="true"><strong>[Battle]</strong> If you want to continue, you’ll have to show
+                                    us
+                                    your strength and
+                                    defeat some
+                                    of our
+                                    soldiers!</td>
+                                <td class="false"><strong>[Battle]</strong> The number of paper dolls will not change if
+                                    you
+                                    KO the wrong
+                                    target.</td>
+                            </tr>
+                            <tr>
+                                <td class="true"><strong>[Report]</strong> We trudged through hours of heavy rain. Our
+                                    troops
+                                    are exhausted.
+                                </td>
+                                <td class="false"><strong>[Battle]</strong> If you want to continue, you’ll need to go
+                                    through all of us!
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="true"><strong>[Report]</strong> Besides a few rabbits, we haven’t eaten a
+                                    proper meal in days.
+                                </td>
+                                <td class="false"><strong>[Report]</strong> The General took my advice and allowed our
+                                    army
+                                    to rest.</td>
+                            </tr>
+                            <tr>
+                                <td class="true"><strong>[Report]</strong> I want to go home. I can’t take it anymore.
+                                    I’m
+                                    escaping this
+                                    hellish place.</td>
+                                <td class="false"><strong>[Report]</strong> We swept onto the battlefield without a
+                                    worry.
+                                    Our
+                                    troops are
+                                    energized and ready for battle!</td>
+                            </tr>
+                            <tr>
+                                <td class="true"><strong>[Report]</strong> I advised the General that our mean needed to
+                                    rest but he cursed
+                                    and drove me
+                                    from his
+                                    tent.</td>
+                                <td class="false"><strong>[Report]</strong> We haven’t eaten in days — even the rabbits
+                                    seem to have fled far from our reach</td>
+                            </tr>
+                            <tr>
+                                <td class="true"><strong>[Report]</strong> We only managed to escape the enemy by
+                                    setting our camp alight and fleeing in the confusion.</td>
+                                <td class="false"><strong>[Report]</strong> We found with all our strength and managed
+                                    to defend
+                                    our camp.</td>
+                            </tr>
+                            <tr>
+                                <td class="true"><strong>[Report]</strong> We progressed with difficulty in the rain,
+                                    but
+                                    didn’t stop to
+                                    rest.</td>
+                                <td class="false"><strong>[Report]</strong> We were ambushed while attacking the enemy.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="true"><strong>[Report]</strong> We were ambushed by the enemy.</td>
+                                <td class="false"><strong>[Report]</strong> Although we were ambushed, we resisted them
+                                    successfully.</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td class="false"><strong>[Report]</strong> While marching we didn’t get any meat at
+                                    all.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </form>
                 <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
-            </form>
+            </div>
         </div>
         <footer>
             © 2025 Lịch Icon — Thiết kế bởi <strong>Ig: _Hatsu_</strong></a>
@@ -151,11 +197,13 @@
     <script src="./index.js"></script>
     <script>
         function openForm() {
-            document.getElementById("myForm").style.display = "block";
+            document.querySelector(".layout").style.display = "block";
+            document.querySelector('.open-button').style.display = "none";
         }
 
         function closeForm() {
-            document.getElementById("myForm").style.display = "none";
+            document.querySelector(".layout").style.display = "none";
+            document.querySelector('.open-button').style.display = "block";
         }
     </script>
 </body>
