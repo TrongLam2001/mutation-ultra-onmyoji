@@ -262,6 +262,85 @@ footer a:hover {
     text-decoration: underline;
 }
 
+.action-buttons {
+    display: flex;
+    gap: 10px;
+    margin-top: 1rem;
+}
+
+.action-buttons .open-button {
+    position: static;
+    width: auto;
+}
+
+.pvp-button {
+    border: 0;
+    border-radius: 8px;
+    background: #0f766e;
+    color: #fff;
+    cursor: pointer;
+    font-weight: 700;
+    padding: 12px 18px;
+}
+
+.pvp-button:hover {
+    background: #115e59;
+}
+
+.pvp-popup {
+    align-items: center;
+    background: rgba(15, 23, 42, 0.72);
+    display: none;
+    inset: 0;
+    justify-content: center;
+    padding: 10px;
+    position: fixed;
+    z-index: 20;
+}
+
+.pvp-popup.is-open {
+    display: flex;
+}
+
+.pvp-panel {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 20px 60px rgba(15, 23, 42, 0.28);
+    display: flex;
+    flex-direction: column;
+    height: 94vh;
+    overflow: hidden;
+    width: min(98vw, 1400px);
+}
+
+.pvp-header {
+    align-items: center;
+    border-bottom: 1px solid #e5e7eb;
+    display: flex;
+    justify-content: space-between;
+    padding: 12px 14px;
+}
+
+.pvp-close {
+    border: 0;
+    border-radius: 6px;
+    background: #ef4444;
+    color: #fff;
+    cursor: pointer;
+    font-weight: 700;
+    padding: 8px 12px;
+}
+
+.pvp-close:hover {
+    background: #dc2626;
+}
+
+.pvp-panel iframe {
+    border: 0;
+    flex: 1;
+    width: 100%;
+}
+
 /* ========== Responsive Design ========== */
 /* responsive */
 @media (max-width:520px) {
@@ -346,6 +425,24 @@ footer a:hover {
     footer {
         font-size: 12px;
         padding: 10px;
+    }
+
+    .action-buttons {
+        flex-direction: column;
+        width: min(100%, 320px);
+    }
+
+    .action-buttons button {
+        width: 100%;
+    }
+
+    .pvp-popup {
+        padding: 6px;
+    }
+
+    .pvp-panel {
+        height: 94vh;
+        width: 100%;
     }
 }
 

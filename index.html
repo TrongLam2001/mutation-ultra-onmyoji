@@ -80,7 +80,20 @@
 
             </div>
         </div>
-        <button class="open-button" onclick="openForm()">Odokuro Message</button>
+        <div class="action-buttons">
+            <button class="open-button" onclick="openForm()">Odokuro Message</button>
+            <button class="pvp-button" onclick="togglePvp()">Build PvP</button>
+        </div>
+
+        <div class="pvp-popup" id="pvpPopup" aria-hidden="true">
+            <div class="pvp-panel" role="dialog" aria-modal="true" aria-label="Build PvP">
+                <div class="pvp-header">
+                    <strong>Build PvP</strong>
+                    <button type="button" class="pvp-close" onclick="togglePvp()">Close</button>
+                </div>
+                <iframe src="./build_pvp.html" title="Build PvP"></iframe>
+            </div>
+        </div>
 
         <div class="layout">
             <div class="form-popup" id="myForm">
@@ -204,7 +217,13 @@
 
         function closeForm() {
             document.querySelector(".layout").style.display = "none";
-            document.querySelector('.open-button').style.display = "block";
+            document.querySelector('.open-button').style.display = "inline-block";
+        }
+
+        function togglePvp() {
+            const popup = document.getElementById("pvpPopup");
+            const isOpen = popup.classList.toggle("is-open");
+            popup.setAttribute("aria-hidden", String(!isOpen));
         }
     </script>
 </body>
